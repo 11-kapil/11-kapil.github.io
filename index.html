@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kapil Goyal · Software Engineer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{--bg:#f2f4f8;--panel:#fff;--ink:#101828;--mute:#566074;--line:#d5dbe6;--acc:#1f4fd8;--acc-ink:#fff;--ok:#0f7a4d;--no:#b42318;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1624;--panel:#18223a;--ink:#e8edf7;--mute:#9aa7bf;--line:#2a3756;--acc:#7ea2ff;--acc-ink:#0f1624;--ok:#4fd195;--no:#ff8a7e}}
+:root[data-theme="dark"]{--bg:#0f1624;--panel:#18223a;--ink:#e8edf7;--mute:#9aa7bf;--line:#2a3756;--acc:#7ea2ff;--acc-ink:#0f1624;--ok:#4fd195;--no:#ff8a7e}
+*,*:before,*:after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;line-height:1.1;margin:0}
+a{color:var(--acc)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;font-weight:500}
+nav div{display:flex;gap:1.25rem;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{color:var(--acc)}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:2.5rem;align-items:center;padding:3rem 0 4rem}
+.hero h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:800;letter-spacing:-.02em}
+.hero p{color:var(--mute);max-width:34rem;margin:1.25rem 0 1.75rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.25rem;border-radius:.5rem;font-weight:500;text-decoration:none;border:1.5px solid var(--acc)}
+.btn.p{background:var(--acc);color:var(--acc-ink)}
+.btn.s{color:var(--acc)}
+.policy{background:var(--panel);border:1.5px solid var(--line);border-radius:.75rem;padding:1.25rem}
+.policy h2{font-size:1.1rem;margin-bottom:.25rem}
+.policy small{color:var(--mute)}
+.roles{display:flex;gap:.5rem;margin:1rem 0;flex-wrap:wrap}
+.roles button{font:inherit;font-size:.95rem;padding:.4rem .85rem;border-radius:2rem;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.roles button[aria-pressed="true"]{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.res{list-style:none;margin:0;padding:0}
+.res li{display:flex;justify-content:space-between;padding:.55rem 0;border-top:1px solid var(--line)}
+.res b{font-family:"Bricolage Grotesque",sans-serif;font-size:.95rem}
+.allow{color:var(--ok)}.deny{color:var(--no)}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:2rem}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.stats strong{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:2.4rem;font-weight:800;color:var(--acc);line-height:1}
+.stats span{color:var(--mute);font-size:.95rem}
+.job{display:grid;grid-template-columns:11rem 1fr;gap:2rem;padding-bottom:2.5rem}
+.job+.job{padding-top:2.5rem;border-top:1px dashed var(--line)}
+.job time{color:var(--mute);font-size:.95rem}
+.job h3{font-size:1.4rem;margin-bottom:.15rem}
+.job .co{color:var(--mute);margin-bottom:1rem}
+.job ul{margin:0;padding-left:1.1rem;max-width:44rem}
+.job li{margin-bottom:.6rem}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:1.75rem 2.5rem}
+.skills h3{font-size:1.05rem;margin-bottom:.5rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chips span{background:var(--panel);border:1px solid var(--line);border-radius:.4rem;padding:.2rem .65rem;font-size:.95rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.two h3{font-size:1.25rem;margin-bottom:.4rem}
+.two p{margin:.2rem 0;color:var(--mute)}
+.two p.t{color:var(--ink)}
+.contact{margin-top:1.25rem;max-width:34rem}
+.crow{display:flex;align-items:center;gap:.75rem;padding:.7rem 0;border-top:1px solid var(--line)}
+.cl{width:4rem;color:var(--mute);font-size:.95rem}
+.cv{flex:1;font-weight:500;user-select:all;overflow-wrap:anywhere}
+.cp{font:inherit;font-size:.9rem;padding:.3rem .8rem;border-radius:.4rem;border:1.5px solid var(--acc);background:transparent;color:var(--acc);cursor:pointer}
+footer{padding:3.5rem 0 3rem;border-top:1px solid var(--line)}
+footer h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:.75rem}
+footer p{color:var(--mute);max-width:32rem}
+@media (max-width:760px){
+.hero{grid-template-columns:1fr;padding-top:1.5rem}
+.stats{grid-template-columns:1fr 1fr}
+.job,.two,.skills{grid-template-columns:1fr;gap:.75rem}
+.two{gap:1.75rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><span>Kapil Goyal</span><div><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<div>
+<h1>I build backend systems that stay fast and reliable at scale.</h1>
+<p>I'm Kapil, a software engineer in Chandigarh who builds Java and Spring Boot services, REST APIs and messaging pipelines for large enterprise clients. My work handles 1.5M+ requests a day at 99.9% availability, and identity and security are my specialty.</p>
+<div class="btns"><a class="btn p" href="#experience">See my work</a><a class="btn s" href="#contact">Contact me</a></div>
+</div>
+<div class="policy" aria-labelledby="pt">
+<h2 id="pt">Try an access check</h2>
+<small>Pick a role to see what a rule-based policy would decide.</small>
+<div class="roles" id="roles">
+<button aria-pressed="true" data-r="employee">Employee</button>
+<button aria-pressed="false" data-r="contractor">Contractor</button>
+<button aria-pressed="false" data-r="auditor">Auditor</button>
+</div>
+<ul class="res" id="res" aria-live="polite"></ul>
+</div>
+</header>
+</div>
+
+<section style="border-top:1px solid var(--line)"><div class="wrap">
+<div class="stats">
+<div><strong>100k+</strong><span>enterprise identities managed through their lifecycle</span></div>
+<div><strong>1.5M+</strong><span>daily API requests across 4 multitenant environments</span></div>
+<div><strong>99.9%</strong><span>system availability under enterprise SLAs</span></div>
+<div><strong>65+</strong><span>critical provisioning and delegation bugs resolved</span></div>
+</div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<article class="job">
+<time>Jul 2025 – Present<br>Chandigarh, India</time>
+<div>
+<h3>Software Engineer 1</h3>
+<div class="co">Alert Enterprise</div>
+<ul>
+<li>Built IAM and provisioning workflows for Wells Fargo, Deutsche Bank and Centene, covering the full lifecycle of 100,000+ identities.</li>
+<li>Wrote backend business logic, validation pipelines and a rule-driven policy engine in Java, Spring Boot and MVEL, raising rule evaluation throughput by 25%.</li>
+<li>Designed secure REST APIs serving 1.5M+ daily requests across 4 multitenant environments, supporting role-based access control and compliance governance.</li>
+<li>Built asynchronous messaging pipelines on ActiveMQ that cut event notification latency by 40% with no lost payloads.</li>
+<li>Fixed 65+ critical bugs in provisioning and delegation workflows, improving reliability by 35% while holding 99.9% availability.</li>
+<li>Led 60+ peer code reviews and mentored 2 junior engineers, reducing authorization logic defects by 48%.</li>
+</ul>
+</div>
+</article>
+<article class="job">
+<time>Jan 2025 – Jun 2025<br>Chandigarh, India</time>
+<div>
+<h3>Software Engineer Intern</h3>
+<div class="co">Alert Enterprise</div>
+<ul>
+<li>Rebuilt responsive Visitor Management and Identity Access screens in Ext JS, speeding up admin tasks by 25% for 500+ daily operators.</li>
+<li>Developed Java microservices and tuned PostgreSQL queries with targeted indexing, cutting average retrieval latency by 35%.</li>
+<li>Wrote 45+ automated regression suites with QA and DevOps, saving 15 hours of manual verification per sprint.</li>
+<li>Patched 30+ defects over 6 sprints through log analysis and unit testing, with a 95% first-time resolution rate.</li>
+</ul>
+</div>
+</article>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Languages</h3><div class="chips"><span>Java</span><span>SQL</span><span>Python</span><span>C/C++</span></div></div>
+<div><h3>Backend</h3><div class="chips"><span>Spring Boot</span><span>Spring MVC</span><span>Hibernate</span><span>JPA</span><span>REST APIs</span><span>Microservices</span><span>ActiveMQ</span><span>MVEL</span></div></div>
+<div><h3>Frontend</h3><div class="chips"><span>Ext JS</span><span>React.js</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div></div>
+<div><h3>Databases</h3><div class="chips"><span>PostgreSQL</span><span>MySQL</span></div></div>
+<div><h3>Cloud and DevOps</h3><div class="chips"><span>AWS EC2</span><span>S3</span><span>CloudWatch</span><span>NGINX</span><span>CI/CD</span></div></div>
+<div><h3>Tools and concepts</h3><div class="chips"><span>Git</span><span>Jira</span><span>Postman</span><span>IAM</span><span>RBAC</span><span>DSA</span><span>OOP</span><span>Agile/Scrum</span></div></div>
+</div>
+</div></section>
+
+<section id="education"><div class="wrap">
+<h2>Education and achievements</h2>
+<div class="two">
+<div>
+<h3>Chitkara University</h3>
+<p class="t">Bachelor of Engineering, Computer Science</p>
+<p>Rajpura, Punjab · Jul 2020 – Jul 2024</p>
+<p>9.8 CGPA</p>
+</div>
+<div>
+<h3>Certifications and sport</h3>
+<p class="t">Java Programming: Certificate of Excellence in advanced data structures, algorithms and OOP</p>
+<p class="t">Web Development: full-stack certification in REST APIs and modern web architecture (Udemy)</p>
+<p class="t">Competitive badminton: two-time district gold medalist, competed at state level</p>
+</div>
+</div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+<h2>Let's talk</h2>
+<p>I'm happy to talk about backend, API and security work. The quickest way to reach me is email.</p>
+<div class="contact">
+<div class="crow"><span class="cl">Email</span><span class="cv" id="em">kapilgoyal98769@gmail.com</span><button class="cp" data-t="em">Copy</button></div>
+<div class="crow"><span class="cl">Phone</span><span class="cv" id="ph">+91 82880 72991</span><button class="cp" data-t="ph">Copy</button></div>
+<div class="btns" style="margin-top:1.25rem">
+<a class="btn s" href="https://www.linkedin.com/in/kapil-g0011/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn s" href="https://github.com/11-kapil" target="_blank" rel="noopener">GitHub</a>
+</div>
+</div>
+</div></footer>
+
+<script>
+(function(){
+var data={
+employee:[["Own profile",1],["Team wiki",1],["HR records",0],["Audit logs",0],["Admin console",0]],
+contractor:[["Own profile",1],["Team wiki",0],["HR records",0],["Audit logs",0],["Admin console",0]],
+auditor:[["Own profile",1],["Team wiki",1],["HR records",0],["Audit logs",1],["Admin console",0]]
+};
+var list=document.getElementById("res"),btns=document.querySelectorAll("#roles button");
+function show(r){
+list.innerHTML=data[r].map(function(x){return '<li><b>'+x[0]+'</b><span class="'+(x[1]?'allow':'deny')+'">'+(x[1]?'Allowed':'Denied')+'</span></li>'}).join("");
+btns.forEach(function(b){b.setAttribute("aria-pressed",b.dataset.r===r)});
+}
+btns.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.r)})});
+show("employee");
+})();
+document.querySelectorAll(".cp").forEach(function(b){b.addEventListener("click",function(){
+var el=document.getElementById(b.dataset.t),t=el.textContent;
+function done(){var o=b.textContent;b.textContent="Copied";setTimeout(function(){b.textContent=o},1500)}
+function fb(){var r=document.createRange();r.selectNodeContents(el);var x=window.getSelection();x.removeAllRanges();x.addRange(r);try{document.execCommand("copy");done()}catch(e){}}
+try{navigator.clipboard.writeText(t).then(done,fb)}catch(e){fb()}
+})});
+
+</script>
+</body>
+</html>
